@@ -1,6 +1,16 @@
 import yaml
 from sqlalchemy import create_engine
 from sqlalchemy import inspect
+from urllib.parse import quote
+from data_cleaning import DataCleaning
+from data_extraction import DataExtractor
+
+if __name__ == "__main__":
+    extractor = DataExtractor("/Users/tayya/multinational-retail-data-centralisation246\db_creds.yaml")
+    table_name2 = 'legacy_users'
+    df_legacy_users = extractor.read_rds_table(table_name2)
+if __name__ == "__main__":
+    cleaned_user_data = DataCleaning.clean_user_data(df_legacy_users)
 
 class DatabaseConnector:
 
@@ -52,6 +62,18 @@ class DatabaseConnector:
         print("Tables in the database:", tables)
         return tables
     
+    @staticmethod
+    def upload_to_db(connection_string, df, table_name, if_exists='replace', index=False):
+        """
+        Uploads a pandas DataFrame to a specified table in the database.
+        """
+        engine_2 = create_engine(connection_string)
+        if engine_2 is not None:
+            df.to_sql(name=table_name, con=engine_2, if_exists=if_exists, index=index)
+            print(f"DataFrame uploaded successfully to '{table_name}' table.")
+        else:
+            print("Failed to create the database engine.")
+    
 
 if __name__ == "__main__":
     creds_file = 'db_creds.yaml'
@@ -76,3 +98,14 @@ if __name__ == "__main__":
         print(f"Tables in the database: {tables}")
     else:
         print("Cannot list tables without an initialized database engine.")
+    
+    original_password = '@Trifles8799'
+    encoded_password = quote(original_password)
+    db_user = 'postgres'
+    db_host = 'localhost'
+    db_port = '5432'
+    db_name = 'sales_data'
+
+    connection_string = f"postgresql+psycopg2://{db_user}:{encoded_password}@{db_host}:{db_port}/{db_name}"
+    table_name = 'dim_users'
+    DatabaseConnector.upload_to_db(connection_string, cleaned_user_data, table_name)

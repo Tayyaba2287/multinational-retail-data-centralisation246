@@ -15,16 +15,16 @@ In a hypothetical scenario for practice, I'm tasked with addressing a challenge 
 ## Usage instructions
 
 ## File structure of the project
-<u>data_extraction.py file</u>
+**data_extraction.py file:**
 This script hosts the DataExtractor class, functioning as a utility for data retrieval across diverse sources. It's designed with specific methods to facilitate the extraction of data from CSV files, APIs, and S3 buckets, catering to a range of data storage formats.
 
-<u>database_utils.py file</u> 
+**database_utils.py file:** 
 In this file, the DatabaseConnector class is defined to manage database interactions. Its primary purpose is to establish connections to a database and handle the uploading of data, ensuring seamless data integration into the designated storage system.
 
-<u>data_cleaning.py file</u> 
+**data_cleaning.py file:** 
 This script introduces the DataCleaning class, equipped with various methods aimed at purifying the data extracted from the aforementioned sources. It focuses on refining the data by removing inconsistencies and standardizing formats, thus preparing it for analysis or storage.
 
-<u>Note</u>
+**Note:**
 at the end of each of these files, you will see codes in hash. That's because I either didn't want to python to repeat the results again or I was testing the dataframes to get more familiar with what's inside the data.
 
 ## License information

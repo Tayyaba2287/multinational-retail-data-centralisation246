@@ -115,7 +115,7 @@ if __name__ == "__main__":
     else:
         print("Cannot list tables without an initialized database engine.")
     
-    original_password = '@Trifles8799'
+    original_password = '' #I have left this blank as it contains my password. I could encrypt it but because of the danger that anything could be decrypted, I decided to ommit it. I also have the all the dataframes uploaded. 
     encoded_password = quote(original_password)
     db_user = 'postgres'
     db_host = 'localhost'

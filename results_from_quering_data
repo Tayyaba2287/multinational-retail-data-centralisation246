@@ -1,0 +1,137 @@
+--The Operations team would like to know which countries we currently operate in and which country now has the most stores.
+
+"country_code"	"count"
+"DE"	141
+"US"	34
+"GB"	266
+
+--The business stakeholders would like to know which locations currently have the most stores.
+"locality"	"store_count"
+"Chapletown"	14
+"Belper"	13
+"Bushey"	12
+"Exeter"	11
+"Arbroath"	10
+"High Wycombe"	10
+"Rutherglen"	10
+
+--Query the database to find out which months have produced the most sales.
+
+"month"	"sales"
+"7"	10284
+"1"	10249
+"8"	10225
+"5"	10150
+"10"	10130
+"12"	10119
+"3"	10119
+"6"	9965
+"11"	9867
+"4"	9755
+"9"	9752
+"2"	9508
+
+-- The company is looking to increase its online sales. They want to know how many sales are happening online vs offline.
+"online"	"online_quantity"	"offline"	"offline_quantity"
+26957	107739	93166	374047
+
+--The sales team wants to know which of the different store types is generated the most revenue so they know where to focus.
+--Find out the total and percentage of sales coming from each of the different store types.
+"store_type"	"total_sales"	"sales_percentage"
+"Local"	3440896.5200001546	44.55772931354668
+"Web Portal"	1726547.0499999092	22.357840653980215
+"Super Store"	1224293.6499999538	15.853933630352113
+"Mall Kiosk"	698791.6099999876	9.048969425257674
+"Outlet"	631804.8099999899	8.181526976863308
+
+
+--The company stakeholders want assurances that the company has been doing well recently.
+--Find which months in which years have had the most sales historically.
+"year"	"month"	"sales_count"
+"1992"	"12"	344
+"1993"	"1"	357
+"1994"	"3"	364
+"1995"	"7"	359
+"1996"	"5"	362
+"1997"	"11"	391
+"1998"	"5"	370
+"1999"	"3"	372
+"2000"	"6"	366
+"2001"	"1"	370
+"2002"	"4"	354
+"2003"	"12"	379
+"2004"	"8"	368
+"2005"	"9"	369
+"2006"	"12"	363
+"2007"	"10"	371
+"2008"	"12"	349
+"2009"	"8"	363
+"2010"	"10"	376
+"2011"	"1"	374
+"2012"	"12"	356
+"2012"	"9"	356
+"2013"	"8"	343
+"2014"	"7"	385
+"2015"	"5"	389
+"2016"	"9"	354
+"2017"	"9"	375
+"2018"	"8"	361
+"2019"	"1"	367
+"2020"	"12"	343
+"2021"	"11"	391
+"2022"	"7"	360
+"2022"	"8"	360
+"2022"	"4"	360
+
+--The operations team would like to know the overall staff numbers in each location around the world. 
+--Perform a query to determine the staff numbers in each of the countries the company sells in.
+
+"country_code"	"total_staff_numbers"
+"GB"	13132
+"DE"	6054
+"US"	1304
+
+--The sales team is looking to expand their territory in Germany. 
+--Determine which type of store is generating the most sales in Germany.
+
+"store_type"	"total_sales"	"country_code"
+"Local"	1109909.5899999605	"DE"
+"Mall Kiosk"	247634.20000000042	"DE"
+"Outlet"	198373.57000000027	"DE"
+"Super Store"	384625.02999999863	"DE"
+
+
+--Sales would like the get an accurate metric for how quickly the company is making sales.
+--Determine the average time taken between each sale grouped by year.
+"year"	"hours"	"minutes"	"seconds"
+"1992"	0	3	12
+"1993"	0	0	22
+"1994"	0	0	21
+"1995"	0	0	21
+"1996"	0	0	21
+"1997"	0	0	21
+"1998"	0	0	21
+"1999"	0	0	21
+"2000"	0	0	21
+"2001"	0	0	21
+"2002"	0	0	21
+"2003"	0	0	21
+"2004"	0	0	21
+"2005"	0	0	21
+"2006"	0	0	21
+"2007"	0	0	21
+"2008"	0	0	21
+"2009"	0	0	21
+"2010"	0	0	21
+"2011"	0	0	21
+"2012"	0	0	21
+"2013"	0	0	22
+"2014"	0	0	21
+"2015"	0	0	21
+"2016"	0	0	21
+"2017"	0	0	21
+"2018"	0	0	21
+"2019"	0	0	21
+"2020"	0	0	21
+"2021"	0	0	21
+"2022"	0	0	24

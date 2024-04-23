@@ -13,6 +13,7 @@ In a hypothetical scenario for practice, I'm tasked with addressing a challenge 
 
 ## Installation instructions
 To run the project locally you can clone the project using git. Copy and paste the following command, making sure you navigate to a desired place in your computer where you want to clone the project.
+git clone https://github.com/Tayyaba2287/multinational-retail-data-centralisation246.git
 
 ## Usage instructions
 Once you clone the project, open it in your preferred IDE, i.e. VS Code, PyCharm etc.
